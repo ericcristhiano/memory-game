@@ -1,0 +1,25 @@
+<div class="board">
+  <app-logo></app-logo>
+
+  <div class="board__cards">
+    <app-card *ngFor="let card of gameService.cards" [card]="card"></app-card>
+  </div>
+
+  <div class="board__info">
+    <p>Rodadas: {{ gameService.rounds }}</p>
+    <button class="cheat-btn" (click)="gameService.toggleCheat()">Cheat</button>
+    <p>Jogador: {{ gameService.playerName }}</p>
+  </div>
+
+  <app-modal [visible]="gameService.isGameOver">
+    <div class="modal-content">
+      <h2 class="modal-content__title">Fim de jogo!</h2>
+
+      <app-button (click)="gameService.playAgain()" type="button">
+        Jogar novamente
+      </app-button>
+
+      <a class="modal-content__link" routerLink="/ranking">Ranking</a>
+    </div>
+  </app-modal>
+</div>

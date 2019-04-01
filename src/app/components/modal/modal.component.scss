@@ -1,0 +1,29 @@
+@import "src/variables";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s;
+
+  &__content {
+    background: $white;
+    width: 360px;
+    padding: 25px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}

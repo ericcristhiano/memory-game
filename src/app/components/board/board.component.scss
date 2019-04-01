@@ -1,0 +1,40 @@
+@import "src/variables";
+
+.board {
+  width: 600px;
+  max-width: 100%;
+  margin: 10px auto;
+
+  &__cards {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: $white;
+  }
+
+  .modal-content {
+    &__title {
+      font-weight: normal;
+      text-align: center;
+      margin-bottom: 15px;
+      color: $gray;
+    }
+
+    &__link {
+      color: $dark-green;
+      margin: 0 20px;
+    }
+  }
+}
+
+.cheat-btn {
+  color: lighten($green, 5%);
+  background: none;
+  border: none;
+}

@@ -1,0 +1,58 @@
+@import "src/variables";
+
+.container {
+  width: 100px;
+  height: 130px;
+  margin: 10px;
+  perspective: 600px;
+  cursor: pointer;
+  border-radius: 20px;
+
+  &:hover .card {
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  &.show .card {
+    transform: rotateY(0);
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 0.5s, box-shadow 0.25s;
+    transform: rotateY(180deg);
+    box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+
+    &__image {
+      max-width: 60%;
+      max-height: 60%;
+    }
+
+    &__face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 20px;
+      background: $white;
+
+      &--back {
+        transform: rotateY(180deg);
+        background: $brown;
+        color: rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &--front {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

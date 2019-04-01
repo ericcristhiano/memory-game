@@ -1,0 +1,24 @@
+@import "src/variables";
+
+.start-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 270px;
+  max-width: 90%;
+}
+
+.input {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  margin: 10px 0;
+  color: $dark-green;
+}
+
+.link {
+  color: $white;
+  margin: 0 15px;
+}

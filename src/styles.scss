@@ -1,0 +1,14 @@
+@import "variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  font-family: "Luckiest Guy", cursive;
+  box-sizing: border-box;
+}
+
+body {
+  background: $green;
+}

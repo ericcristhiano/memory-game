@@ -1,0 +1,39 @@
+@import "src/variables";
+
+.table-container {
+  width: 500px;
+  max-width: 100%;
+  margin: 20px auto;
+  max-height: 420px;
+  overflow-y: scroll;
+}
+
+.ranking-table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  color: $white;
+
+  &__tr {
+    background: rgba(255, 255, 255, 0.15);
+
+    &:nth-child(even) {
+      background: $dark-green;
+    }
+  }
+
+  &__td {
+    padding: 10px 0;
+  }
+
+  &__th {
+    font-weight: normal;
+    background: darken($dark-green, 15%);
+    padding: 10px 0;
+  }
+}
+
+app-button {
+  text-align: center;
+  display: block;
+}

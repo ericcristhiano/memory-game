@@ -1,0 +1,25 @@
+<app-logo></app-logo>
+<div class="table-container">
+  <table class="ranking-table">
+    <thead>
+      <tr class="ranking-table__tr">
+        <th class="ranking-table__th">Jogador</th>
+        <th class="ranking-table__th">Rodadas</th>
+      </tr>
+    </thead>
+
+    <tbody class="ranking-table__tbody">
+      <tr
+        class="ranking-table__tr"
+        *ngFor="let player of rankingService.getList()"
+      >
+        <td class="ranking-table__td">{{ player.name }}</td>
+        <td class="ranking-table__td">{{ player.rounds }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-button class="center" type="submit" (click)="gameService.playAgain()">
+  Jogar!
+</app-button>
