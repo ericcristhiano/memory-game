@@ -30,6 +30,12 @@
       color: $dark-green;
       margin: 0 20px;
     }
+
+    &__rounds {
+      margin-bottom: 10px;
+      text-align: center;
+      color: lighten($gray, 35%);
+    }
   }
 }
 

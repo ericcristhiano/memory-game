@@ -13,7 +13,10 @@
 
   <app-modal [visible]="gameService.isGameOver">
     <div class="modal-content">
-      <h2 class="modal-content__title">Fim de jogo!</h2>
+      <h2 class="modal-content__title">Parabéns! Você venceu!</h2>
+      <p class="modal-content__rounds">
+        Quantidade de rodadas: {{ gameService.rounds }}
+      </p>
 
       <app-button (click)="gameService.playAgain()" type="button">
         Jogar novamente
