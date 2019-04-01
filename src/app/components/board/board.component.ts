@@ -7,7 +7,7 @@ import { GameService } from "src/app/services/game.service";
   styleUrls: ["./board.component.scss"]
 })
 export class BoardComponent implements OnInit {
-  constructor(private gameService: GameService) {}
+  constructor(public gameService: GameService) {}
 
   ngOnInit() {}
 }

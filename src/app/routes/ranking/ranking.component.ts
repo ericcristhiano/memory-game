@@ -9,8 +9,8 @@ import { GameService } from "src/app/services/game.service";
 })
 export class RankingComponent implements OnInit {
   constructor(
-    private rankingService: RankingService,
-    private gameService: GameService
+    public rankingService: RankingService,
+    public gameService: GameService
   ) {}
 
   ngOnInit() {}

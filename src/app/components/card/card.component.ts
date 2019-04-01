@@ -10,7 +10,7 @@ import { GameService } from "src/app/services/game.service";
 export class CardComponent implements OnInit {
   @Input() card: Card;
 
-  constructor(private gameService: GameService) {}
+  constructor(public gameService: GameService) {}
 
   ngOnInit() {}
 }

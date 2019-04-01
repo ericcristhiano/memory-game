@@ -8,7 +8,7 @@ import { Router } from "@angular/router";
   styleUrls: ["./start.component.scss"]
 })
 export class StartComponent {
-  constructor(private gameService: GameService, private router: Router) {}
+  constructor(public gameService: GameService, public router: Router) {}
 
   startGame() {
     if (this.gameService.playerName && this.gameService.playerName.trim()) {

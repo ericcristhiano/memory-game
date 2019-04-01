@@ -1,7 +1,7 @@
 export class Card {
   id: string;
   visible: boolean = false;
-  image: string;
+  image: { name: string; path: string };
 
   constructor(id, image) {
     this.id = id;
